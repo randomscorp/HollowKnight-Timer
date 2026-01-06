@@ -58,6 +58,7 @@ namespace HKTimer {
                 GameObject gameObject = new GameObject(name);
                 gameObject.AddComponent<MeshFilter>().mesh = CreateMesh(vert);
                 MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
+                meshRenderer.material.shader = Shader.Find("");
                 Texture2D tex = new Texture2D(1, 1);
                 tex.SetPixel(0, 0, c ?? Color.white);
                 tex.Apply();
